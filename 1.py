@@ -26,7 +26,6 @@ class Quad:
 
     def is_intersect(self, other):
         # Проверяем пересечение двух четырехугольников
-        # Для простоты, будем считать, что они пересекаются, если хотя бы одна вершина одного четырехугольника находится внутри другого
         for point in self.points:
             if self.point_inside_polygon(point, other.points):
                 return True
@@ -99,3 +98,11 @@ class Pentagon:
                             inside = not inside
             p1x, p1y = p2x, p2y
         return inside
+
+# Создаем объекты четырехугольника и пятиугольника
+q= Quad([Point(0, 0), Point(0, 1), Point(1, 1), Point(1, 0)])
+p = Pentagon([Point(0.5, 1.5), Point(0.5, 2.5), Point(1.5, 2.5), Point(2, 2), Point(1.5, 1.5)])
+
+# Вызываем методы для сравнения объектов по площади и определения пересечения
+print("Результат сравнения:", q.compare(p))
+print("Результат пересечения:", q.is_intersect(p))
