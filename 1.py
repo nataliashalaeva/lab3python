@@ -41,6 +41,17 @@ def point_inside_polygon(self, point, polygon):
             p1x, p1y = p2x, p2y
         return inside
 
+ def is_intersect(self, other):
+        # Проверяем пересечение двух четырехугольников
+        # Для простоты, будем считать, что они пересекаются, если хотя бы одна вершина одного четырехугольника находится внутри другого
+        for point in self.points:
+            if self.point_inside_polygon(point, other.points):
+                return True
+        for point in other.points:
+            if self.point_inside_polygon(point, self.points):
+                return True
+        return False
+
 class Pentagon:
     def __init__(self, points):
         self.points = points
