@@ -30,7 +30,7 @@ class Quad:
 
     def is_intersect(self, other):
         if not isinstance(other, Pentagon):
-            raise ValueError("Intersection object must be a Quad")
+            raise ValueError("Intersection object must be a Pentagon")
         for point in self.points:
             if self.point_inside_polygon(point, other.points):
                 return True
@@ -105,7 +105,7 @@ class Pentagon:
             p1x, p1y = p2x, p2y
         return inside
 
-# Пример использования
+
 try:
     q = Quad([Point(0, 0), Point(0, 1), Point(1, 1), Point(1, 0)])
     p = Pentagon([Point(0.5, 1.5), Point(0.5, 2.5), Point(1.5, 2.5), Point(2, 2), Point(1.5, 1.5)])
