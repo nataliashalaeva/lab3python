@@ -26,6 +26,7 @@ class Quad:
 
     def is_intersect(self, other):
         # Проверяем пересечение двух четырехугольников
+         # Для простоты, будем считать, что они пересекаются, если хотя бы одна вершина одного четырехугольника находится внутри другого
         for point in self.points:
             if self.point_inside_polygon(point, other.points):
                 return True
