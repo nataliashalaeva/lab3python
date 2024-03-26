@@ -105,5 +105,5 @@ q= Quad([Point(0, 0), Point(0, 1), Point(1, 1), Point(1, 0)])
 p = Pentagon([Point(0.5, 1.5), Point(0.5, 2.5), Point(1.5, 2.5), Point(2, 2), Point(1.5, 1.5)])
 
 # Вызываем методы для сравнения объектов по площади и определения пересечения
-print("Результат сравнения:", q.compare(p))
-print("Результат пересечения:", q.is_intersect(p))
+ print("Comparison result:", q.compare(p))
+    print("Intersection result:", q.is_intersect(p))
