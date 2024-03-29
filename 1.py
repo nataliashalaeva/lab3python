@@ -46,7 +46,7 @@ class Quad:
                 if point.y <= max(p1y, p2y):
                     if point.x <= max(p1x, p2x):
                         if p1y != p2y:
-                            xinters = (point.y - p1y) * (p2x - p1x) / (p2y - p1y) + p1x
+                            xinters = (point.y - p1y) * (p2x - p1x) / (p2y - p1y) + p1x #вычисляется x-координата пересечения луча, проведенного из точки, с ребром многоугольник
                         if p1x == p2x or point.x <= xinters:
                             inside = not inside
             p1x, p1y = p2x, p2y
