@@ -36,7 +36,7 @@ class Quad:
         return False
 
     def point_inside_polygon(self, point, polygon):
-        # Функция для определения, находится ли точка внутри полигона
+        # Функция для определения, находится ли точка внутри полигона:алгоритм пересечения лучей (ray casting algorithm)
         n = len(polygon)
         inside = False
         p1x, p1y = polygon[0].x, polygon[0].y
